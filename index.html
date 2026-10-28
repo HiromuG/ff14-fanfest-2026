@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0b111c">
+<meta name="description" content="FF14 Fan Fest 2026 のタイムテーブルと会場マップ。">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>FF14 Fan Fest 2026 | 会場ガイド</title>
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="app-shell">
+  <header class="topbar">
+    <a href="#schedule" class="wordmark" aria-label="FF14 Fan Fest 2026">
+      <span class="brand-symbol" aria-hidden="true">14</span>
+      <span class="brand-copy"><span class="brand-meta">FFXIV · TOKYO</span><strong>Fan Fest <span>2026</span></strong></span>
+    </a>
+    <span class="top-location">10.31 — 11.01</span>
+  </header>
+
+  <main class="main-layout">
+    <section class="intro">
+      <div class="intro-overline"><span class="intro-line"></span> 2026.10.31 — 11.01</div>
+      <div class="intro-row">
+        <div><h1>FF14 <em>Fan Fest 2026</em></h1><p>タイムテーブルと会場マップ</p></div>
+        <div class="intro-dates" aria-label="会場">幕張メッセ <b>10.31<span>—</span>11.01</b></div>
+      </div>
+    </section>
+
+    <nav class="primary-tabs" aria-label="ページ切り替え">
+      <button class="primary-tab active" id="tabSchedule" type="button" data-tab="schedule" aria-selected="true"><span class="tab-icon" aria-hidden="true">▦</span> タイムテーブル</button>
+      <button class="primary-tab" id="tabMap" type="button" data-tab="map" aria-selected="false"><span class="tab-icon" aria-hidden="true">⌖</span> 会場マップ</button>
+    </nav>
+
+    <section id="schedulePage" class="page" aria-labelledby="scheduleTitle">
+      <div class="section-top">
+        <div><div class="section-kicker">SCHEDULE</div><h2 id="scheduleTitle">ステージ時間割</h2></div>
+        <div class="venue-label">幕張メッセ <span>4–6ホール</span></div>
+      </div>
+      <div class="day-selector" role="group" aria-label="日付">
+        <button class="day-button active" type="button" data-day="1" aria-pressed="true"><span class="day-week">SAT / DAY 01</span><span class="day-date">10.31 <small>土</small></span></button>
+        <button class="day-button" type="button" data-day="2" aria-pressed="false"><span class="day-week">SUN / DAY 02</span><span class="day-date">11.01 <small>日</small></span></button>
+      </div>
+      <div class="day-summary"><span class="summary-dot"></span><span id="daySummary">DAY 1 · 10月31日（土）</span><span class="summary-hours">OPEN 09:00 — CLOSE 21:00</span></div>
+      <div id="scheduleList" class="schedule-list"></div>
+      <div class="schedule-foot"><span>※ 時間・内容は変更になる場合があります。</span><a href="https://fanfest.finalfantasyxiv.com/2026/jp/stages/" target="_blank" rel="noopener noreferrer">公式ステージ情報 ↗</a></div>
+    </section>
+
+    <section id="mapPage" class="page" hidden aria-labelledby="mapTitle">
+      <div class="section-top">
+        <div><div class="section-kicker">MAP</div><h2 id="mapTitle">会場マップ</h2></div>
+        <a class="venue-label official-link" href="https://fanfest.finalfantasyxiv.com/2026/jp/maps/" target="_blank" rel="noopener noreferrer">公式サイト ↗</a>
+      </div>
+      <div class="map-tabs" role="group" aria-label="マップのエリア">
+        <button type="button" class="map-tab active" data-map="entire" aria-pressed="true">全体・屋外</button>
+        <button type="button" class="map-tab" data-map="hall13" aria-pressed="false">1–3ホール</button>
+        <button type="button" class="map-tab" data-map="hall46" aria-pressed="false">4–6ホール</button>
+        <button type="button" class="map-tab" data-map="hall7" aria-pressed="false">7ホール</button>
+      </div>
+      <div class="map-card" id="mapCard">
+        <div class="map-toolbar"><div class="map-title"><span id="mapShortName">2F中央モール・屋外展示場</span><small id="mapSubtitle">会場全体の位置関係</small></div><div class="map-controls"><button type="button" id="zoomOut" aria-label="縮小" title="縮小">−</button><span id="zoomValue" aria-live="polite">100%</span><button type="button" id="zoomIn" aria-label="拡大" title="拡大">＋</button><button type="button" id="resetZoom" aria-label="縮尺を戻す" title="縮尺を戻す">↺</button><button type="button" id="toggleFullscreen" aria-label="全画面表示" title="全画面表示">⛶</button></div></div>
+        <div class="map-viewport" id="mapViewport" aria-label="会場マップ。指で拡大・移動できます。"><img id="mapImage" draggable="false" src="assets/map-entire.jpg" alt="幕張メッセ 2F中央モール・屋外展示場の会場案内図"></div>
+        <div class="map-hint">指2本で拡大・縮小／ドラッグで移動　<span>·</span>　PCではマウスホイールも使えます</div>
+      </div>
+      <section class="contents-section" aria-labelledby="contentsTitle">
+        <div class="contents-heading"><div><span class="contents-overline">CONTENTS</span><h3 id="contentsTitle">コンテンツ一覧</h3></div><span class="contents-counter" id="contentsCount" aria-live="polite"></span></div>
+        <p class="contents-intro">タップでチェック・もう一度タップで解除。各コンテンツの開催時間も表示しています。</p>
+        <div class="contents-grid" id="contentsList"></div>
+        <p class="opening-note">※ 一般アクティビティの時間は基本目安です。多くのブースでは終了30分前が最終受付の目安ですが、体験人数・混雑・在庫によって早く終了することがあります。個別に時間が確認できない展示やサービスは、その旨を表示しています。</p>
+        <div class="contents-note">※ 公式に名称が掲載されていない一部の灰色マーカー（16・28～30）は、コンテンツ一覧から省いています。18・19の名称はマップの図柄による参考表記です。<a href="https://fanfest.finalfantasyxiv.com/2026/jp/floors/" target="_blank" rel="noopener noreferrer">公式フロア情報 ↗</a></div>
+      </section>
+      <p class="map-source">マップ画像 © SQUARE ENIX。レイアウトが変更された場合は、現地の案内が優先です。</p>
+    </section>
+  </main>
+  <footer class="site-footer"><span>FF14 Fan Fest 2026 · 個人用ガイド</span></footer>
+</div>
+<script src="app.js" defer></script>
+</body>
+</html>

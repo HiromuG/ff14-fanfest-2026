@@ -1,0 +1,15 @@
+{
+  "name": "FF14 Fan Fest 2026 – 会場ガイド",
+  "short_name": "FF14 FF26",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#0b111c",
+  "theme_color": "#0b111c",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
